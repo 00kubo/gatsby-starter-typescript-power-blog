@@ -28,7 +28,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'post',
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/src/pages/blog`,
       },
     },
     {
@@ -75,5 +75,11 @@ module.exports = {
         icon: config.favicon,
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    }
   ]
 };
